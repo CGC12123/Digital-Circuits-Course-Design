@@ -1,0 +1,95 @@
+library ieee;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+--*************************
+entity send is
+	port(
+		clk1, clk2, rest, key_temp: in std_logic;
+		x_in: in std_logic_vector(7 downto 0);
+		x_out: out std_logic_vector(7 downto 0);
+		q: out std_logic_vector(3 downto 0);
+		y, x_tiaozhi: out std_logic);
+end send;
+--**************************
+architecture arch of send is
+type sreg0_type is(s13, s12, s11, s10, s9, s8, s7, s6, s5, s4, s3, s2, s1, s0);
+signal sreg0: sreg0_type;
+signal y_temp, x: std_logic;
+signal q_data: std_logic_vector(3 downto 0);
+signal x_data: std_logic_vector(7 downto 0);
+begin
+-------- 基带信号产生
+-- key为1时发送一帧红外基带信号
+-- clk1: 400ns 作为基带信号基本单位
+-- clk2: 载波 理论上38KHz 
+
+sreg0_machine: process(clk1)
+begin
+if key_temp = '1' then
+	if clk1' event and clk1 = '1' then
+		if rest = '1' then sreg0 <= s0; q<= "0101"; y_temp <= '0';
+		else
+			case sreg0 is
+				when s0 => y_temp <= '0';
+						sreg0 <= s1; q <= "0001";
+				when s1 => y_temp <= '1';
+					if q_data < "1000" then
+						if x = '1' then
+							sreg0 <= s2; q <= "0010";
+						else sreg0 <= s4; q <= "0100";
+						end if;
+					else sreg0 <= s7; q <= "0111";
+					end if;
+				when s2 => y_temp <= '0';
+						sreg0 <= s1; q <= "0001";
+				when s4 => y_temp <= '0';
+						sreg0 <= s5; q <= "0101";
+				when s5 => y_temp <= '0';
+						sreg0 <= s6; q <= "0110";
+				when s6 => y_temp <= '0';
+						sreg0 <= s1; q <= "0011";
+				when s7 => y_temp <= '0';
+						sreg0 <= s8; q <= "1000";
+				when s8 => y_temp <= '0';
+						sreg0 <= s9; q <= "1001";
+				when s9 => y_temp <= '0';
+						sreg0 <= s10; q <= "1010";
+				when s10 => y_temp <= '0';
+						sreg0 <= s11; q <= "1011";
+				when s11 => y_temp <= '0';
+						sreg0 <= s12; q <= "1100";
+				when s12 => y_temp <= '1';
+						sreg0 <= s13; q <= "1101";
+				when s13 => y_temp <= '0';
+						sreg0 <= s0; q <= "1101";
+				when others =>
+						null;
+			end case;
+		end if;
+	end if;
+else
+		sreg0 <= s0; q <= "0000";
+		y_temp <= '0';
+end if;
+end process;
+--***************************
+--** 调制信号生成 **--
+x_tiaozhi <= y_temp and clk2;
+process(y_temp, x_data)
+begin
+	if key_temp = '1' and sreg0 = s0 then -- 状态s时输入一组待发送的二进制数
+		x_data <= x_in;
+	else 
+		if y_temp' event and y_temp = '0' then
+			x_data(7 downto 0) <= x_data(6 downto 0) & '0'; x<= x_data(6); -- 否则把待发送的寄存器左移一位 最高位x用于发送
+			if q_data < "1001" then q_data <= q_data + 1; -- 计数器自加1
+			else q_data <= "0000";
+			end if;
+		end if;
+	end if;
+end process;
+y <= y_temp; x_out <= x_data;
+
+end arch;
