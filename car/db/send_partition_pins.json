@@ -1,0 +1,113 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "x_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "x_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "x_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "x_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "x_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "x_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "x_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "x_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "q[0]",
+					"strict" : false
+				},
+				{
+					"name" : "q[1]",
+					"strict" : false
+				},
+				{
+					"name" : "q[2]",
+					"strict" : false
+				},
+				{
+					"name" : "q[3]",
+					"strict" : false
+				},
+				{
+					"name" : "y",
+					"strict" : false
+				},
+				{
+					"name" : "x_tiaozhi",
+					"strict" : false
+				},
+				{
+					"name" : "x_in[0]",
+					"strict" : false
+				},
+				{
+					"name" : "x_in[1]",
+					"strict" : false
+				},
+				{
+					"name" : "x_in[2]",
+					"strict" : false
+				},
+				{
+					"name" : "x_in[3]",
+					"strict" : false
+				},
+				{
+					"name" : "x_in[4]",
+					"strict" : false
+				},
+				{
+					"name" : "x_in[5]",
+					"strict" : false
+				},
+				{
+					"name" : "x_in[6]",
+					"strict" : false
+				},
+				{
+					"name" : "x_in[7]",
+					"strict" : false
+				},
+				{
+					"name" : "clk2",
+					"strict" : false
+				},
+				{
+					"name" : "key_temp",
+					"strict" : false
+				},
+				{
+					"name" : "clk1",
+					"strict" : false
+				},
+				{
+					"name" : "rest",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

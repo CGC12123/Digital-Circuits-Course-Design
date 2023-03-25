@@ -1,0 +1,113 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "pwmh_l",
+					"strict" : false
+				},
+				{
+					"name" : "pwmq_l",
+					"strict" : false
+				},
+				{
+					"name" : "pwmq_r",
+					"strict" : false
+				},
+				{
+					"name" : "pwmh_r",
+					"strict" : false
+				},
+				{
+					"name" : "out_start_test",
+					"strict" : false
+				},
+				{
+					"name" : "if_send_start",
+					"strict" : false
+				},
+				{
+					"name" : "motor_sy[3]",
+					"strict" : false
+				},
+				{
+					"name" : "motor_sy[2]",
+					"strict" : false
+				},
+				{
+					"name" : "motor_sy[1]",
+					"strict" : false
+				},
+				{
+					"name" : "motor_sy[0]",
+					"strict" : false
+				},
+				{
+					"name" : "motor_sz[3]",
+					"strict" : false
+				},
+				{
+					"name" : "motor_sz[2]",
+					"strict" : false
+				},
+				{
+					"name" : "motor_sz[1]",
+					"strict" : false
+				},
+				{
+					"name" : "motor_sz[0]",
+					"strict" : false
+				},
+				{
+					"name" : "out_test[3]",
+					"strict" : false
+				},
+				{
+					"name" : "out_test[2]",
+					"strict" : false
+				},
+				{
+					"name" : "out_test[1]",
+					"strict" : false
+				},
+				{
+					"name" : "out_test[0]",
+					"strict" : false
+				},
+				{
+					"name" : "model_bs",
+					"strict" : false
+				},
+				{
+					"name" : "input[3]",
+					"strict" : false
+				},
+				{
+					"name" : "input[2]",
+					"strict" : false
+				},
+				{
+					"name" : "input[1]",
+					"strict" : false
+				},
+				{
+					"name" : "input[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clkin",
+					"strict" : false
+				},
+				{
+					"name" : "if_start",
+					"strict" : false
+				},
+				{
+					"name" : "hongwai_in",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

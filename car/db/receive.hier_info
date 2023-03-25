@@ -1,0 +1,39 @@
+|receive
+clk => q2[0].CLK
+clk => q2[1].CLK
+clk => q2[2].CLK
+clk => q2[3].CLK
+clk => q2[4].CLK
+clk => q1[0].CLK
+clk => q1[1].CLK
+clk => q1[2].CLK
+clk => q1[3].CLK
+clk => q1[4].CLK
+start => data1[0].CLK
+start => data1[1].CLK
+start => data1[2].CLK
+start => data1[3].CLK
+start => data1[4].CLK
+start => data1[5].CLK
+start => data1[6].CLK
+start => data1[7].CLK
+start => q1[0].ACLR
+start => q1[1].ACLR
+start => q1[2].ACLR
+start => q1[3].ACLR
+start => q1[4].ACLR
+start => q2[4].ENA
+start => q2[3].ENA
+start => q2[2].ENA
+start => q2[1].ENA
+start => q2[0].ENA
+x_out[0] <= data1[0].DB_MAX_OUTPUT_PORT_TYPE
+x_out[1] <= data1[1].DB_MAX_OUTPUT_PORT_TYPE
+x_out[2] <= data1[2].DB_MAX_OUTPUT_PORT_TYPE
+x_out[3] <= data1[3].DB_MAX_OUTPUT_PORT_TYPE
+x_out[4] <= data1[4].DB_MAX_OUTPUT_PORT_TYPE
+x_out[5] <= data1[5].DB_MAX_OUTPUT_PORT_TYPE
+x_out[6] <= data1[6].DB_MAX_OUTPUT_PORT_TYPE
+x_out[7] <= data1[7].DB_MAX_OUTPUT_PORT_TYPE
+
+

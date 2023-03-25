@@ -1,0 +1,57 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "moto_sz[0]",
+					"strict" : false
+				},
+				{
+					"name" : "moto_sz[1]",
+					"strict" : false
+				},
+				{
+					"name" : "moto_sz[2]",
+					"strict" : false
+				},
+				{
+					"name" : "moto_sz[3]",
+					"strict" : false
+				},
+				{
+					"name" : "moto_sy[0]",
+					"strict" : false
+				},
+				{
+					"name" : "moto_sy[1]",
+					"strict" : false
+				},
+				{
+					"name" : "moto_sy[2]",
+					"strict" : false
+				},
+				{
+					"name" : "moto_sy[3]",
+					"strict" : false
+				},
+				{
+					"name" : "l[1]",
+					"strict" : false
+				},
+				{
+					"name" : "r[0]",
+					"strict" : false
+				},
+				{
+					"name" : "l[0]",
+					"strict" : false
+				},
+				{
+					"name" : "r[1]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

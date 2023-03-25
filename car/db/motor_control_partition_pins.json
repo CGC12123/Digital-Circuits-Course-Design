@@ -1,0 +1,117 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "pwmh_l",
+					"strict" : false
+				},
+				{
+					"name" : "pwmq_l",
+					"strict" : false
+				},
+				{
+					"name" : "pwmq_r",
+					"strict" : false
+				},
+				{
+					"name" : "pwmh_r",
+					"strict" : false
+				},
+				{
+					"name" : "motor_sy[3]",
+					"strict" : false
+				},
+				{
+					"name" : "motor_sy[2]",
+					"strict" : false
+				},
+				{
+					"name" : "motor_sy[1]",
+					"strict" : false
+				},
+				{
+					"name" : "motor_sy[0]",
+					"strict" : false
+				},
+				{
+					"name" : "motor_sz[3]",
+					"strict" : false
+				},
+				{
+					"name" : "motor_sz[2]",
+					"strict" : false
+				},
+				{
+					"name" : "motor_sz[1]",
+					"strict" : false
+				},
+				{
+					"name" : "motor_sz[0]",
+					"strict" : false
+				},
+				{
+					"name" : "l[1]",
+					"strict" : false
+				},
+				{
+					"name" : "r[1]",
+					"strict" : false
+				},
+				{
+					"name" : "r[0]",
+					"strict" : false
+				},
+				{
+					"name" : "l[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ref_L[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ref_L[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ref_L[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ref_L[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ref_L[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_12_5M",
+					"strict" : false
+				},
+				{
+					"name" : "ref_R[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ref_R[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ref_R[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ref_R[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ref_R[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

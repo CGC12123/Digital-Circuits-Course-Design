@@ -1,0 +1,23 @@
+|translator
+l[0] => Equal1.IN3
+l[0] => Equal2.IN3
+l[0] => Equal4.IN3
+l[1] => Equal1.IN2
+l[1] => Equal2.IN2
+l[1] => Equal4.IN2
+r[0] => Equal0.IN3
+r[0] => Equal3.IN3
+r[0] => Equal5.IN3
+r[1] => Equal0.IN2
+r[1] => Equal3.IN2
+r[1] => Equal5.IN2
+moto_sz[0] <= moto_sz.DB_MAX_OUTPUT_PORT_TYPE
+moto_sz[1] <= moto_sz.DB_MAX_OUTPUT_PORT_TYPE
+moto_sz[2] <= moto_sz.DB_MAX_OUTPUT_PORT_TYPE
+moto_sz[3] <= moto_sz.DB_MAX_OUTPUT_PORT_TYPE
+moto_sy[0] <= moto_sy.DB_MAX_OUTPUT_PORT_TYPE
+moto_sy[1] <= moto_sy.DB_MAX_OUTPUT_PORT_TYPE
+moto_sy[2] <= moto_sy.DB_MAX_OUTPUT_PORT_TYPE
+moto_sy[3] <= moto_sy.DB_MAX_OUTPUT_PORT_TYPE
+
+

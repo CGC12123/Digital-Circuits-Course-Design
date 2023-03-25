@@ -1,0 +1,576 @@
+Analysis & Synthesis report for car
+Sat Mar 25 12:52:07 2023
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |car|send:inst7|sreg0
+  9. State Machine - |car|control_trans_test:inst16|NextState
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: clk_generator:inst3|divider_12_5M:U0
+ 15. Parameter Settings for User Entity Instance: clk_generator:inst3|divider_50:U1
+ 16. Parameter Settings for User Entity Instance: clk_generator:inst3|divider_2_5M:U2
+ 17. Parameter Settings for User Entity Instance: clk_generator:inst3|divider_38K:U3
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat Mar 25 12:52:07 2023           ;
+; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Standard Edition ;
+; Revision Name                      ; car                                             ;
+; Top-level Entity Name              ; car                                             ;
+; Family                             ; Cyclone IV E                                    ;
+; Total logic elements               ; 162                                             ;
+;     Total combinational functions  ; 143                                             ;
+;     Dedicated logic registers      ; 116                                             ;
+; Total registers                    ; 116                                             ;
+; Total pins                         ; 33                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE6F17C8        ;                    ;
+; Top-level entity name                                            ; car                ; car                ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-6         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                 ;
++----------------------------------+-----------------+------------------------------------------+----------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                 ; Library ;
++----------------------------------+-----------------+------------------------------------------+----------------------------------------------+---------+
+; car.bdf                          ; yes             ; User Block Diagram/Schematic File        ; E:/Library/FPGA/carrr/car.bdf                ;         ;
+; control_trans_test.vhd           ; yes             ; User VHDL File                           ; E:/Library/FPGA/carrr/control_trans_test.vhd ;         ;
+; motor_control.bdf                ; yes             ; Auto-Found Block Diagram/Schematic File  ; E:/Library/FPGA/carrr/motor_control.bdf      ;         ;
+; pwm.bdf                          ; yes             ; Auto-Found Block Diagram/Schematic File  ; E:/Library/FPGA/carrr/pwm.bdf                ;         ;
+; pwm_generator.vhd                ; yes             ; Auto-Found VHDL File                     ; E:/Library/FPGA/carrr/pwm_generator.vhd      ;         ;
+; taw_generator.vhd                ; yes             ; Auto-Found VHDL File                     ; E:/Library/FPGA/carrr/taw_generator.vhd      ;         ;
+; translator.vhd                   ; yes             ; Auto-Found VHDL File                     ; E:/Library/FPGA/carrr/translator.vhd         ;         ;
+; clk_generator.vhd                ; yes             ; Auto-Found VHDL File                     ; E:/Library/FPGA/carrr/clk_generator.vhd      ;         ;
+; receive.vhd                      ; yes             ; Auto-Found VHDL File                     ; E:/Library/FPGA/carrr/receive.vhd            ;         ;
+; send.vhd                         ; yes             ; Auto-Found VHDL File                     ; E:/Library/FPGA/carrr/send.vhd               ;         ;
++----------------------------------+-----------------+------------------------------------------+----------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                            ;
++---------------------------------------------+------------------------------------------+
+; Resource                                    ; Usage                                    ;
++---------------------------------------------+------------------------------------------+
+; Estimated Total logic elements              ; 162                                      ;
+;                                             ;                                          ;
+; Total combinational functions               ; 143                                      ;
+; Logic element usage by number of LUT inputs ;                                          ;
+;     -- 4 input functions                    ; 44                                       ;
+;     -- 3 input functions                    ; 31                                       ;
+;     -- <=2 input functions                  ; 68                                       ;
+;                                             ;                                          ;
+; Logic elements by mode                      ;                                          ;
+;     -- normal mode                          ; 89                                       ;
+;     -- arithmetic mode                      ; 54                                       ;
+;                                             ;                                          ;
+; Total registers                             ; 116                                      ;
+;     -- Dedicated logic registers            ; 116                                      ;
+;     -- I/O registers                        ; 0                                        ;
+;                                             ;                                          ;
+; I/O pins                                    ; 33                                       ;
+;                                             ;                                          ;
+; Embedded Multiplier 9-bit elements          ; 0                                        ;
+;                                             ;                                          ;
+; Maximum fan-out node                        ; clk_generator:inst3|divider_50:U1|clkout ;
+; Maximum fan-out                             ; 36                                       ;
+; Total fan-out                               ; 750                                      ;
+; Average fan-out                             ; 2.31                                     ;
++---------------------------------------------+------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                   ;
++--------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                   ; Entity Name        ; Library Name ;
++--------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+--------------------+--------------+
+; |car                           ; 143 (0)             ; 116 (0)                   ; 0           ; 0            ; 0       ; 0         ; 33   ; 0            ; |car                                                  ; car                ; work         ;
+;    |clk_generator:inst3|       ; 38 (0)              ; 27 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |car|clk_generator:inst3                              ; clk_generator      ; work         ;
+;       |divider_12_5M:U0|       ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |car|clk_generator:inst3|divider_12_5M:U0             ; divider_12_5M      ; work         ;
+;       |divider_2_5M:U2|        ; 6 (6)               ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |car|clk_generator:inst3|divider_2_5M:U2              ; divider_2_5M       ; work         ;
+;       |divider_50:U1|          ; 32 (32)             ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |car|clk_generator:inst3|divider_50:U1                ; divider_50         ; work         ;
+;    |control_trans_test:inst16| ; 72 (72)             ; 61 (61)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |car|control_trans_test:inst16                        ; control_trans_test ; work         ;
+;    |motor_control:inst2|       ; 17 (0)              ; 10 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |car|motor_control:inst2                              ; motor_control      ; work         ;
+;       |pwm:inst|               ; 13 (0)              ; 10 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |car|motor_control:inst2|pwm:inst                     ; pwm                ; work         ;
+;          |PWM_generator:inst1| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |car|motor_control:inst2|pwm:inst|PWM_generator:inst1 ; PWM_generator      ; work         ;
+;          |PWM_generator:inst2| ; 3 (3)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |car|motor_control:inst2|pwm:inst|PWM_generator:inst2 ; PWM_generator      ; work         ;
+;          |PWM_generator:inst3| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |car|motor_control:inst2|pwm:inst|PWM_generator:inst3 ; PWM_generator      ; work         ;
+;          |PWM_generator:inst|  ; 3 (3)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |car|motor_control:inst2|pwm:inst|PWM_generator:inst  ; PWM_generator      ; work         ;
+;          |TAW_generator:inst4| ; 7 (7)               ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |car|motor_control:inst2|pwm:inst|TAW_generator:inst4 ; TAW_generator      ; work         ;
+;       |translator:inst1|       ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |car|motor_control:inst2|translator:inst1             ; translator         ; work         ;
+;    |receive:inst8|             ; 16 (16)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |car|receive:inst8                                    ; receive            ; work         ;
++--------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+--------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |car|send:inst7|sreg0                                                                                                                                   ;
++-----------+-----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+-----------+-----------+-----------+----------+
+; Name      ; sreg0.s13 ; sreg0.s1 ; sreg0.s2 ; sreg0.s3 ; sreg0.s4 ; sreg0.s5 ; sreg0.s6 ; sreg0.s7 ; sreg0.s8 ; sreg0.s9 ; sreg0.s10 ; sreg0.s11 ; sreg0.s12 ; sreg0.s0 ;
++-----------+-----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+-----------+-----------+-----------+----------+
+; sreg0.s0  ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0         ; 0         ; 0        ;
+; sreg0.s12 ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0         ; 1         ; 1        ;
+; sreg0.s11 ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 1         ; 0         ; 1        ;
+; sreg0.s10 ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1         ; 0         ; 0         ; 1        ;
+; sreg0.s9  ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0         ; 0         ; 0         ; 1        ;
+; sreg0.s8  ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0         ; 0         ; 0         ; 1        ;
+; sreg0.s7  ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0         ; 0         ; 0         ; 1        ;
+; sreg0.s6  ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0         ; 0         ; 0         ; 1        ;
+; sreg0.s5  ; 0         ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0         ; 0         ; 1        ;
+; sreg0.s4  ; 0         ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0         ; 0         ; 1        ;
+; sreg0.s3  ; 0         ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0         ; 0         ; 1        ;
+; sreg0.s2  ; 0         ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0         ; 0         ; 1        ;
+; sreg0.s1  ; 0         ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0         ; 0         ; 1        ;
+; sreg0.s13 ; 1         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0         ; 0         ; 1        ;
++-----------+-----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+-----------+-----------+-----------+----------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |car|control_trans_test:inst16|NextState                                                                                                                                        ;
++-----------------------+----------------------+-----------------------+----------------------+----------------------+---------------------+----------------+-------------------+-----------------+
+; Name                  ; NextState.STOP_READY ; NextState.TURN_RIGHTW ; NextState.TURN_LEFTW ; NextState.TURN_RIGHT ; NextState.TURN_LEFT ; NextState.STOP ; NextState.FORWARD ; NextState.START ;
++-----------------------+----------------------+-----------------------+----------------------+----------------------+---------------------+----------------+-------------------+-----------------+
+; NextState.START       ; 0                    ; 0                     ; 0                    ; 0                    ; 0                   ; 0              ; 0                 ; 0               ;
+; NextState.FORWARD     ; 0                    ; 0                     ; 0                    ; 0                    ; 0                   ; 0              ; 1                 ; 1               ;
+; NextState.STOP        ; 0                    ; 0                     ; 0                    ; 0                    ; 0                   ; 1              ; 0                 ; 1               ;
+; NextState.TURN_LEFT   ; 0                    ; 0                     ; 0                    ; 0                    ; 1                   ; 0              ; 0                 ; 1               ;
+; NextState.TURN_RIGHT  ; 0                    ; 0                     ; 0                    ; 1                    ; 0                   ; 0              ; 0                 ; 1               ;
+; NextState.TURN_LEFTW  ; 0                    ; 0                     ; 1                    ; 0                    ; 0                   ; 0              ; 0                 ; 1               ;
+; NextState.TURN_RIGHTW ; 0                    ; 1                     ; 0                    ; 0                    ; 0                   ; 0              ; 0                 ; 1               ;
+; NextState.STOP_READY  ; 1                    ; 0                     ; 0                    ; 0                    ; 0                   ; 0              ; 0                 ; 1               ;
++-----------------------+----------------------+-----------------------+----------------------+----------------------+---------------------+----------------+-------------------+-----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                            ;
++---------------------------------------------------------+---------------------------------------------------------------------+
+; Register name                                           ; Reason for Removal                                                  ;
++---------------------------------------------------------+---------------------------------------------------------------------+
+; control_trans_test:inst16|ref_R[4]                      ; Stuck at GND due to stuck port data_in                              ;
+; control_trans_test:inst16|ref_L[4]                      ; Stuck at GND due to stuck port data_in                              ;
+; control_trans_test:inst16|send_open_temp1[1..31]        ; Stuck at GND due to stuck port data_in                              ;
+; control_trans_test:inst16|send_stop_temp2[0..4]         ; Stuck at GND due to stuck port data_in                              ;
+; control_trans_test:inst16|send_stop_temp2[5..31]        ; Lost fanout                                                         ;
+; control_trans_test:inst16|send_open_temp2[0..31]        ; Stuck at GND due to stuck port data_in                              ;
+; control_trans_test:inst16|send_stop                     ; Stuck at GND due to stuck port clock_enable                         ;
+; control_trans_test:inst16|send_stop_temp                ; Stuck at GND due to stuck port clock_enable                         ;
+; clk_generator:inst3|divider_38K:U3|clkt                 ; Merged with clk_generator:inst3|divider_38K:U3|clkout               ;
+; motor_control:inst2|pwm:inst|TAW_generator:inst4|TAW[4] ; Merged with motor_control:inst2|pwm:inst|TAW_generator:inst4|cnt[4] ;
+; motor_control:inst2|pwm:inst|TAW_generator:inst4|TAW[3] ; Merged with motor_control:inst2|pwm:inst|TAW_generator:inst4|cnt[3] ;
+; motor_control:inst2|pwm:inst|TAW_generator:inst4|TAW[2] ; Merged with motor_control:inst2|pwm:inst|TAW_generator:inst4|cnt[2] ;
+; motor_control:inst2|pwm:inst|TAW_generator:inst4|TAW[1] ; Merged with motor_control:inst2|pwm:inst|TAW_generator:inst4|cnt[1] ;
+; motor_control:inst2|pwm:inst|TAW_generator:inst4|TAW[0] ; Merged with motor_control:inst2|pwm:inst|TAW_generator:inst4|cnt[0] ;
+; control_trans_test:inst16|transform_out[0..2,5,6]       ; Merged with control_trans_test:inst16|key                           ;
+; control_trans_test:inst16|ref_R[2]                      ; Merged with control_trans_test:inst16|ref_L[2]                      ;
+; control_trans_test:inst16|count[1..31]                  ; Merged with control_trans_test:inst16|count[0]                      ;
+; control_trans_test:inst16|transform_out[3,4]            ; Merged with control_trans_test:inst16|count[0]                      ;
+; control_trans_test:inst16|count[0]                      ; Stuck at GND due to stuck port data_in                              ;
+; control_trans_test:inst16|key                           ; Stuck at GND due to stuck port data_in                              ;
+; send:inst7|y_temp                                       ; Stuck at GND due to stuck port clear                                ;
+; send:inst7|x_data[0..6]                                 ; Stuck at GND due to stuck port clock                                ;
+; send:inst7|x                                            ; Stuck at GND due to stuck port clock                                ;
+; send:inst7|q_data[0..3]                                 ; Stuck at GND due to stuck port clock                                ;
+; clk_generator:inst3|divider_38K:U3|cnt[0..2]            ; Lost fanout                                                         ;
+; clk_generator:inst3|divider_38K:U3|clkout               ; Lost fanout                                                         ;
+; clk_generator:inst3|divider_38K:U3|cnt[3..9]            ; Lost fanout                                                         ;
+; clk_generator:inst3|divider_12_5M:U0|cnt                ; Merged with clk_generator:inst3|divider_2_5M:U2|cnt[0]              ;
+; send:inst7|sreg0.s10                                    ; Lost fanout                                                         ;
+; send:inst7|sreg0.s9                                     ; Lost fanout                                                         ;
+; send:inst7|sreg0.s8                                     ; Lost fanout                                                         ;
+; send:inst7|sreg0.s7                                     ; Lost fanout                                                         ;
+; send:inst7|sreg0.s12                                    ; Lost fanout                                                         ;
+; send:inst7|sreg0.s11                                    ; Lost fanout                                                         ;
+; send:inst7|sreg0.s13                                    ; Lost fanout                                                         ;
+; send:inst7|sreg0.s0                                     ; Stuck at GND due to stuck port clear                                ;
+; send:inst7|sreg0.s6                                     ; Stuck at GND due to stuck port clear                                ;
+; send:inst7|sreg0.s5                                     ; Lost fanout                                                         ;
+; send:inst7|sreg0.s4                                     ; Lost fanout                                                         ;
+; send:inst7|sreg0.s1                                     ; Lost fanout                                                         ;
+; send:inst7|sreg0.s2                                     ; Lost fanout                                                         ;
+; send:inst7|sreg0.s3                                     ; Stuck at GND due to stuck port clear                                ;
+; control_trans_test:inst16|NextState.START               ; Lost fanout                                                         ;
+; control_trans_test:inst16|NextState.FORWARD             ; Lost fanout                                                         ;
+; clk_generator:inst3|divider_50:U1|cnt[0]                ; Merged with clk_generator:inst3|divider_2_5M:U2|cnt[0]              ;
+; clk_generator:inst3|divider_50:U1|cnt[1]                ; Merged with clk_generator:inst3|divider_12_5M:U0|clkt               ;
+; Total Number of Removed Registers = 189                 ;                                                                     ;
++---------------------------------------------------------+---------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                             ;
++----------------------------------------------+--------------------------------+-----------------------------------------------------------------------------------------+
+; Register name                                ; Reason for Removal             ; Registers Removed due to This Register                                                  ;
++----------------------------------------------+--------------------------------+-----------------------------------------------------------------------------------------+
+; control_trans_test:inst16|send_stop          ; Stuck at GND                   ; control_trans_test:inst16|count[0], control_trans_test:inst16|key, send:inst7|y_temp,   ;
+;                                              ; due to stuck port clock_enable ; send:inst7|x_data[6], send:inst7|x_data[5], send:inst7|x_data[4], send:inst7|x_data[3], ;
+;                                              ;                                ; send:inst7|x_data[2], send:inst7|x_data[1], send:inst7|x_data[0], send:inst7|x,         ;
+;                                              ;                                ; send:inst7|q_data[3], send:inst7|q_data[2], send:inst7|q_data[1], send:inst7|q_data[0], ;
+;                                              ;                                ; clk_generator:inst3|divider_38K:U3|clkout,                                              ;
+;                                              ;                                ; clk_generator:inst3|divider_38K:U3|cnt[8]                                               ;
+; control_trans_test:inst16|send_stop_temp2[4] ; Stuck at GND                   ; control_trans_test:inst16|send_stop_temp2[31],                                          ;
+;                                              ; due to stuck port data_in      ; control_trans_test:inst16|send_stop_temp2[30],                                          ;
+;                                              ;                                ; control_trans_test:inst16|send_stop_temp2[29],                                          ;
+;                                              ;                                ; control_trans_test:inst16|send_stop_temp2[28],                                          ;
+;                                              ;                                ; control_trans_test:inst16|send_stop_temp2[27],                                          ;
+;                                              ;                                ; control_trans_test:inst16|send_stop_temp2[26],                                          ;
+;                                              ;                                ; control_trans_test:inst16|send_stop_temp2[25],                                          ;
+;                                              ;                                ; control_trans_test:inst16|send_stop_temp2[24],                                          ;
+;                                              ;                                ; control_trans_test:inst16|send_stop_temp2[23],                                          ;
+;                                              ;                                ; control_trans_test:inst16|send_stop_temp                                                ;
+; clk_generator:inst3|divider_38K:U3|cnt[2]    ; Lost Fanouts                   ; clk_generator:inst3|divider_38K:U3|cnt[1],                                              ;
+;                                              ;                                ; clk_generator:inst3|divider_38K:U3|cnt[0],                                              ;
+;                                              ;                                ; clk_generator:inst3|divider_38K:U3|cnt[3],                                              ;
+;                                              ;                                ; clk_generator:inst3|divider_38K:U3|cnt[4],                                              ;
+;                                              ;                                ; clk_generator:inst3|divider_38K:U3|cnt[5],                                              ;
+;                                              ;                                ; clk_generator:inst3|divider_38K:U3|cnt[6],                                              ;
+;                                              ;                                ; clk_generator:inst3|divider_38K:U3|cnt[7]                                               ;
+; send:inst7|sreg0.s6                          ; Stuck at GND                   ; send:inst7|sreg0.s5, send:inst7|sreg0.s4, send:inst7|sreg0.s1                           ;
+;                                              ; due to stuck port clear        ;                                                                                         ;
+; send:inst7|sreg0.s0                          ; Stuck at GND                   ; send:inst7|sreg0.s2                                                                     ;
+;                                              ; due to stuck port clear        ;                                                                                         ;
++----------------------------------------------+--------------------------------+-----------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 116   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 5     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 63    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |car|receive:inst8|data1[3]                          ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |car|motor_control:inst2|translator:inst1|moto_sz[3] ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |car|control_trans_test:inst16|NextState             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: clk_generator:inst3|divider_12_5M:U0 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; len            ; 2     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: clk_generator:inst3|divider_50:U1 ;
++----------------+--------+------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                 ;
++----------------+--------+------------------------------------------------------+
+; len            ; 500000 ; Signed Integer                                       ;
++----------------+--------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: clk_generator:inst3|divider_2_5M:U2 ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; len            ; 10    ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: clk_generator:inst3|divider_38K:U3 ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; len            ; 658   ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 33                          ;
+; cycloneiii_ff         ; 116                         ;
+;     CLR               ; 5                           ;
+;     ENA               ; 63                          ;
+;     plain             ; 48                          ;
+; cycloneiii_lcell_comb ; 145                         ;
+;     arith             ; 54                          ;
+;         2 data inputs ; 48                          ;
+;         3 data inputs ; 6                           ;
+;     normal            ; 91                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 14                          ;
+;         3 data inputs ; 25                          ;
+;         4 data inputs ; 44                          ;
+;                       ;                             ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.57                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+    Info: Processing started: Sat Mar 25 12:51:57 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off car -c car
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file car.bdf
+    Info (12023): Found entity 1: car
+Warning (12019): Can't analyze file -- file speed_set.vhd is missing
+Warning (12019): Can't analyze file -- file ../control/key_start.vhd is missing
+Info (12021): Found 2 design units, including 1 entities, in source file black_stop.vhd
+    Info (12022): Found design unit 1: black_stop-beh File: E:/Library/FPGA/carrr/black_stop.vhd Line: 35
+    Info (12023): Found entity 1: black_stop File: E:/Library/FPGA/carrr/black_stop.vhd Line: 15
+Warning (12019): Can't analyze file -- file test.vhd is missing
+Warning (12019): Can't analyze file -- file control_line.vhd is missing
+Warning (12019): Can't analyze file -- file control_line2.vhd is missing
+Info (12021): Found 2 design units, including 1 entities, in source file control_trans_test.vhd
+    Info (12022): Found design unit 1: control_trans_test-beh File: E:/Library/FPGA/carrr/control_trans_test.vhd Line: 37
+    Info (12023): Found entity 1: control_trans_test File: E:/Library/FPGA/carrr/control_trans_test.vhd Line: 6
+Info (12127): Elaborating entity "car" for the top level hierarchy
+Warning (275043): Pin "show_model" is missing source
+Warning (12125): Using design file motor_control.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: motor_control
+Info (12128): Elaborating entity "motor_control" for hierarchy "motor_control:inst2"
+Warning (12125): Using design file pwm.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: pwm
+Info (12128): Elaborating entity "pwm" for hierarchy "motor_control:inst2|pwm:inst"
+Warning (12125): Using design file pwm_generator.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: PWM_generator-beh File: E:/Library/FPGA/carrr/pwm_generator.vhd Line: 14
+    Info (12023): Found entity 1: PWM_generator File: E:/Library/FPGA/carrr/pwm_generator.vhd Line: 6
+Info (12128): Elaborating entity "PWM_generator" for hierarchy "motor_control:inst2|pwm:inst|PWM_generator:inst2"
+Warning (12125): Using design file taw_generator.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: TAW_generator-beh File: E:/Library/FPGA/carrr/taw_generator.vhd Line: 13
+    Info (12023): Found entity 1: TAW_generator File: E:/Library/FPGA/carrr/taw_generator.vhd Line: 6
+Info (12128): Elaborating entity "TAW_generator" for hierarchy "motor_control:inst2|pwm:inst|TAW_generator:inst4"
+Warning (12125): Using design file translator.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: translator-beh File: E:/Library/FPGA/carrr/translator.vhd Line: 14
+    Info (12023): Found entity 1: translator File: E:/Library/FPGA/carrr/translator.vhd Line: 6
+Info (12128): Elaborating entity "translator" for hierarchy "motor_control:inst2|translator:inst1"
+Warning (12125): Using design file clk_generator.vhd, which is not specified as a design file for the current project, but contains definitions for 10 design units and 5 entities in project
+    Info (12022): Found design unit 1: clk_generator-struct File: E:/Library/FPGA/carrr/clk_generator.vhd Line: 16
+    Info (12022): Found design unit 2: divider_12_5M-beh File: E:/Library/FPGA/carrr/clk_generator.vhd Line: 60
+    Info (12022): Found design unit 3: divider_50-beh File: E:/Library/FPGA/carrr/clk_generator.vhd Line: 95
+    Info (12022): Found design unit 4: divider_2_5M-beh File: E:/Library/FPGA/carrr/clk_generator.vhd Line: 129
+    Info (12022): Found design unit 5: divider_38K-beh File: E:/Library/FPGA/carrr/clk_generator.vhd Line: 163
+    Info (12023): Found entity 1: clk_generator File: E:/Library/FPGA/carrr/clk_generator.vhd Line: 6
+    Info (12023): Found entity 2: divider_12_5M File: E:/Library/FPGA/carrr/clk_generator.vhd Line: 53
+    Info (12023): Found entity 3: divider_50 File: E:/Library/FPGA/carrr/clk_generator.vhd Line: 88
+    Info (12023): Found entity 4: divider_2_5M File: E:/Library/FPGA/carrr/clk_generator.vhd Line: 122
+    Info (12023): Found entity 5: divider_38K File: E:/Library/FPGA/carrr/clk_generator.vhd Line: 156
+Info (12128): Elaborating entity "clk_generator" for hierarchy "clk_generator:inst3"
+Info (12128): Elaborating entity "divider_12_5M" for hierarchy "clk_generator:inst3|divider_12_5M:U0" File: E:/Library/FPGA/carrr/clk_generator.vhd Line: 42
+Info (12128): Elaborating entity "divider_50" for hierarchy "clk_generator:inst3|divider_50:U1" File: E:/Library/FPGA/carrr/clk_generator.vhd Line: 43
+Info (12128): Elaborating entity "divider_2_5M" for hierarchy "clk_generator:inst3|divider_2_5M:U2" File: E:/Library/FPGA/carrr/clk_generator.vhd Line: 44
+Info (12128): Elaborating entity "divider_38K" for hierarchy "clk_generator:inst3|divider_38K:U3" File: E:/Library/FPGA/carrr/clk_generator.vhd Line: 45
+Info (12128): Elaborating entity "control_trans_test" for hierarchy "control_trans_test:inst16"
+Warning (10036): Verilog HDL or VHDL warning at control_trans_test.vhd(50): object "if_backcar_stop" assigned a value but never read File: E:/Library/FPGA/carrr/control_trans_test.vhd Line: 50
+Warning (10540): VHDL Signal Declaration warning at control_trans_test.vhd(58): used explicit default value for signal "send_stop_temp1" because signal was never assigned a value File: E:/Library/FPGA/carrr/control_trans_test.vhd Line: 58
+Warning (12125): Using design file receive.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: receive-abc File: E:/Library/FPGA/carrr/receive.vhd Line: 12
+    Info (12023): Found entity 1: receive File: E:/Library/FPGA/carrr/receive.vhd Line: 6
+Info (12128): Elaborating entity "receive" for hierarchy "receive:inst8"
+Warning (12125): Using design file send.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: send-arch File: E:/Library/FPGA/carrr/send.vhd Line: 16
+    Info (12023): Found entity 1: send File: E:/Library/FPGA/carrr/send.vhd Line: 7
+Info (12128): Elaborating entity "send" for hierarchy "send:inst7"
+Warning (10492): VHDL Process Statement warning at send.vhd(30): signal "key_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Library/FPGA/carrr/send.vhd Line: 30
+Warning (10492): VHDL Process Statement warning at send.vhd(82): signal "key_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Library/FPGA/carrr/send.vhd Line: 82
+Warning (10492): VHDL Process Statement warning at send.vhd(82): signal "sreg0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Library/FPGA/carrr/send.vhd Line: 82
+Warning (10492): VHDL Process Statement warning at send.vhd(83): signal "x_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Library/FPGA/carrr/send.vhd Line: 83
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "show_model" is stuck at GND
+    Warning (13410): Pin "y" is stuck at GND
+    Warning (13410): Pin "tiaozhi" is stuck at GND
+    Warning (13410): Pin "if_send_stop" is stuck at GND
+    Warning (13410): Pin "vcc_for_hw" is stuck at VCC
+    Warning (13410): Pin "gnd_for_hw" is stuck at GND
+    Warning (13410): Pin "gnd_for_hwout" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 51 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 204 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
+    Info (21059): Implemented 25 output pins
+    Info (21061): Implemented 171 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
+    Info: Peak virtual memory: 4802 megabytes
+    Info: Processing ended: Sat Mar 25 12:52:07 2023
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:19
+
+

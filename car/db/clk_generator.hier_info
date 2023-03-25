@@ -1,0 +1,39 @@
+|clk_generator
+clkin => divider_4:U0.clkin
+clkin => divider_1M:U1.clkin
+clk_12_5M <= divider_4:U0.clkout
+clk_50 <= divider_1M:U1.clkout
+
+
+|clk_generator|divider_4:U0
+clkin => clkout~reg0.CLK
+clkin => cnt.CLK
+clkin => clkt.CLK
+clkout <= clkout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clk_generator|divider_1M:U1
+clkin => clkout~reg0.CLK
+clkin => cnt[0].CLK
+clkin => cnt[1].CLK
+clkin => cnt[2].CLK
+clkin => cnt[3].CLK
+clkin => cnt[4].CLK
+clkin => cnt[5].CLK
+clkin => cnt[6].CLK
+clkin => cnt[7].CLK
+clkin => cnt[8].CLK
+clkin => cnt[9].CLK
+clkin => cnt[10].CLK
+clkin => cnt[11].CLK
+clkin => cnt[12].CLK
+clkin => cnt[13].CLK
+clkin => cnt[14].CLK
+clkin => cnt[15].CLK
+clkin => cnt[16].CLK
+clkin => cnt[17].CLK
+clkin => cnt[18].CLK
+clkin => clkt.CLK
+clkout <= clkout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

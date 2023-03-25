@@ -1,0 +1,19 @@
+|TAW_generator
+clkin => TAW[0]~reg0.CLK
+clkin => TAW[1]~reg0.CLK
+clkin => TAW[2]~reg0.CLK
+clkin => TAW[3]~reg0.CLK
+clkin => TAW[4]~reg0.CLK
+clkin => cnt[0].CLK
+clkin => cnt[1].CLK
+clkin => cnt[2].CLK
+clkin => cnt[3].CLK
+clkin => cnt[4].CLK
+clkin => up.CLK
+TAW[0] <= TAW[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+TAW[1] <= TAW[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+TAW[2] <= TAW[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+TAW[3] <= TAW[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+TAW[4] <= TAW[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Mar 25 12:52:07 2023
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+Revision Name : car
+Top-level Entity Name : car
+Family : Cyclone IV E
+Total logic elements : 162
+    Total combinational functions : 143
+    Dedicated logic registers : 116
+Total registers : 116
+Total pins : 33
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

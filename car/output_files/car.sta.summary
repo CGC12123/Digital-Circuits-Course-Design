@@ -1,0 +1,209 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk_generator:inst3|divider_50:U1|clkout'
+Slack : -3.240
+TNS   : -74.200
+
+Type  : Slow 1200mV 85C Model Setup 'clkin'
+Slack : -2.961
+TNS   : -43.531
+
+Type  : Slow 1200mV 85C Model Setup 'clk_generator:inst3|divider_2_5M:U2|clkout'
+Slack : -2.764
+TNS   : -48.309
+
+Type  : Slow 1200mV 85C Model Setup 'clk_generator:inst3|divider_12_5M:U0|clkout'
+Slack : -2.397
+TNS   : -27.487
+
+Type  : Slow 1200mV 85C Model Setup 'hongwai_in'
+Slack : -2.022
+TNS   : -15.554
+
+Type  : Slow 1200mV 85C Model Hold 'clkin'
+Slack : 0.433
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk_generator:inst3|divider_2_5M:U2|clkout'
+Slack : 0.452
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk_generator:inst3|divider_50:U1|clkout'
+Slack : 0.452
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk_generator:inst3|divider_12_5M:U0|clkout'
+Slack : 0.454
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'hongwai_in'
+Slack : 0.485
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'clk_generator:inst3|divider_12_5M:U0|clkout'
+Slack : -1.459
+TNS   : -7.295
+
+Type  : Slow 1200mV 85C Model Removal 'clk_generator:inst3|divider_12_5M:U0|clkout'
+Slack : 1.576
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clkin'
+Slack : -3.000
+TNS   : -43.149
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'hongwai_in'
+Slack : -3.000
+TNS   : -14.896
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_generator:inst3|divider_50:U1|clkout'
+Slack : -1.487
+TNS   : -53.532
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_generator:inst3|divider_2_5M:U2|clkout'
+Slack : -1.487
+TNS   : -37.175
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_generator:inst3|divider_12_5M:U0|clkout'
+Slack : -1.487
+TNS   : -29.740
+
+Type  : Slow 1200mV 0C Model Setup 'clk_generator:inst3|divider_50:U1|clkout'
+Slack : -2.791
+TNS   : -64.004
+
+Type  : Slow 1200mV 0C Model Setup 'clkin'
+Slack : -2.783
+TNS   : -38.535
+
+Type  : Slow 1200mV 0C Model Setup 'clk_generator:inst3|divider_2_5M:U2|clkout'
+Slack : -2.578
+TNS   : -44.431
+
+Type  : Slow 1200mV 0C Model Setup 'clk_generator:inst3|divider_12_5M:U0|clkout'
+Slack : -2.091
+TNS   : -23.605
+
+Type  : Slow 1200mV 0C Model Setup 'hongwai_in'
+Slack : -1.751
+TNS   : -13.425
+
+Type  : Slow 1200mV 0C Model Hold 'clkin'
+Slack : 0.382
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk_generator:inst3|divider_50:U1|clkout'
+Slack : 0.401
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk_generator:inst3|divider_2_5M:U2|clkout'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk_generator:inst3|divider_12_5M:U0|clkout'
+Slack : 0.403
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'hongwai_in'
+Slack : 0.430
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'clk_generator:inst3|divider_12_5M:U0|clkout'
+Slack : -1.262
+TNS   : -6.310
+
+Type  : Slow 1200mV 0C Model Removal 'clk_generator:inst3|divider_12_5M:U0|clkout'
+Slack : 1.616
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clkin'
+Slack : -3.000
+TNS   : -43.149
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'hongwai_in'
+Slack : -3.000
+TNS   : -14.896
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_generator:inst3|divider_50:U1|clkout'
+Slack : -1.487
+TNS   : -53.532
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_generator:inst3|divider_2_5M:U2|clkout'
+Slack : -1.487
+TNS   : -37.175
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_generator:inst3|divider_12_5M:U0|clkout'
+Slack : -1.487
+TNS   : -29.740
+
+Type  : Fast 1200mV 0C Model Setup 'clk_generator:inst3|divider_50:U1|clkout'
+Slack : -0.880
+TNS   : -12.305
+
+Type  : Fast 1200mV 0C Model Setup 'clk_generator:inst3|divider_12_5M:U0|clkout'
+Slack : -0.790
+TNS   : -5.912
+
+Type  : Fast 1200mV 0C Model Setup 'clkin'
+Slack : -0.723
+TNS   : -5.637
+
+Type  : Fast 1200mV 0C Model Setup 'clk_generator:inst3|divider_2_5M:U2|clkout'
+Slack : -0.717
+TNS   : -11.015
+
+Type  : Fast 1200mV 0C Model Setup 'hongwai_in'
+Slack : -0.414
+TNS   : -3.041
+
+Type  : Fast 1200mV 0C Model Hold 'clkin'
+Slack : 0.178
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk_generator:inst3|divider_2_5M:U2|clkout'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk_generator:inst3|divider_50:U1|clkout'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk_generator:inst3|divider_12_5M:U0|clkout'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'hongwai_in'
+Slack : 0.201
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'clk_generator:inst3|divider_12_5M:U0|clkout'
+Slack : -0.869
+TNS   : -4.345
+
+Type  : Fast 1200mV 0C Model Removal 'clk_generator:inst3|divider_12_5M:U0|clkout'
+Slack : 0.576
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clkin'
+Slack : -3.000
+TNS   : -31.865
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'hongwai_in'
+Slack : -3.000
+TNS   : -12.123
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_generator:inst3|divider_50:U1|clkout'
+Slack : -1.000
+TNS   : -36.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_generator:inst3|divider_2_5M:U2|clkout'
+Slack : -1.000
+TNS   : -25.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_generator:inst3|divider_12_5M:U0|clkout'
+Slack : -1.000
+TNS   : -20.000
+
+------------------------------------------------------------

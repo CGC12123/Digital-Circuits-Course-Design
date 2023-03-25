@@ -1,0 +1,15 @@
+|PWM_generator
+clkin => PWM~reg0.CLK
+ref[0] => LessThan0.IN5
+ref[1] => LessThan0.IN4
+ref[2] => LessThan0.IN3
+ref[3] => LessThan0.IN2
+ref[4] => LessThan0.IN1
+TAW[0] => LessThan0.IN10
+TAW[1] => LessThan0.IN9
+TAW[2] => LessThan0.IN8
+TAW[3] => LessThan0.IN7
+TAW[4] => LessThan0.IN6
+PWM <= PWM~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

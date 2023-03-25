@@ -1,0 +1,11 @@
+
+State Machine - |control_just_bs|NextState
+Name NextState.STOP_READY NextState.TURN_RIGHTW NextState.TURN_LEFTW NextState.TURN_RIGHT NextState.TURN_LEFT NextState.STOP NextState.FORWARD NextState.START 
+NextState.START 0 0 0 0 0 0 0 0 
+NextState.FORWARD 0 0 0 0 0 0 1 1 
+NextState.STOP 0 0 0 0 0 1 0 1 
+NextState.TURN_LEFT 0 0 0 0 1 0 0 1 
+NextState.TURN_RIGHT 0 0 0 1 0 0 0 1 
+NextState.TURN_LEFTW 0 0 1 0 0 0 0 1 
+NextState.TURN_RIGHTW 0 1 0 0 0 0 0 1 
+NextState.STOP_READY 1 0 0 0 0 0 0 1 

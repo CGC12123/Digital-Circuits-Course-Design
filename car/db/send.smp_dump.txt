@@ -1,0 +1,17 @@
+
+State Machine - |send|sreg0
+Name sreg0.s13 sreg0.s1 sreg0.s2 sreg0.s3 sreg0.s4 sreg0.s5 sreg0.s6 sreg0.s7 sreg0.s8 sreg0.s9 sreg0.s10 sreg0.s11 sreg0.s12 sreg0.s0 
+sreg0.s0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+sreg0.s12 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+sreg0.s11 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+sreg0.s10 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+sreg0.s9 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+sreg0.s8 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+sreg0.s7 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+sreg0.s6 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+sreg0.s5 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+sreg0.s4 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+sreg0.s3 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+sreg0.s2 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+sreg0.s1 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+sreg0.s13 1 0 0 0 0 0 0 0 0 0 0 0 0 1 

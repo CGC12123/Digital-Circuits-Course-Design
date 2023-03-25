@@ -1,0 +1,111 @@
+|pwm
+pwmq_r <= PWM_generator:inst2.PWM
+clk_12_5M => PWM_generator:inst2.clkin
+clk_12_5M => TAW_generator:inst4.clkin
+clk_12_5M => PWM_generator:inst1.clkin
+clk_12_5M => PWM_generator:inst.clkin
+clk_12_5M => PWM_generator:inst3.clkin
+ref_R[0] => PWM_generator:inst2.ref[0]
+ref_R[0] => PWM_generator:inst3.ref[0]
+ref_R[1] => PWM_generator:inst2.ref[1]
+ref_R[1] => PWM_generator:inst3.ref[1]
+ref_R[2] => PWM_generator:inst2.ref[2]
+ref_R[2] => PWM_generator:inst3.ref[2]
+ref_R[3] => PWM_generator:inst2.ref[3]
+ref_R[3] => PWM_generator:inst3.ref[3]
+ref_R[4] => PWM_generator:inst2.ref[4]
+ref_R[4] => PWM_generator:inst3.ref[4]
+pwmq_l <= PWM_generator:inst1.PWM
+ref_L[0] => PWM_generator:inst1.ref[0]
+ref_L[0] => PWM_generator:inst.ref[0]
+ref_L[1] => PWM_generator:inst1.ref[1]
+ref_L[1] => PWM_generator:inst.ref[1]
+ref_L[2] => PWM_generator:inst1.ref[2]
+ref_L[2] => PWM_generator:inst.ref[2]
+ref_L[3] => PWM_generator:inst1.ref[3]
+ref_L[3] => PWM_generator:inst.ref[3]
+ref_L[4] => PWM_generator:inst1.ref[4]
+ref_L[4] => PWM_generator:inst.ref[4]
+pwmh_l <= PWM_generator:inst.PWM
+pwmh_R <= PWM_generator:inst3.PWM
+
+
+|pwm|PWM_generator:inst2
+clkin => PWM~reg0.CLK
+ref[0] => LessThan0.IN5
+ref[1] => LessThan0.IN4
+ref[2] => LessThan0.IN3
+ref[3] => LessThan0.IN2
+ref[4] => LessThan0.IN1
+TAW[0] => LessThan0.IN10
+TAW[1] => LessThan0.IN9
+TAW[2] => LessThan0.IN8
+TAW[3] => LessThan0.IN7
+TAW[4] => LessThan0.IN6
+PWM <= PWM~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pwm|TAW_generator:inst4
+clkin => TAW[0]~reg0.CLK
+clkin => TAW[1]~reg0.CLK
+clkin => TAW[2]~reg0.CLK
+clkin => TAW[3]~reg0.CLK
+clkin => TAW[4]~reg0.CLK
+clkin => cnt[0].CLK
+clkin => cnt[1].CLK
+clkin => cnt[2].CLK
+clkin => cnt[3].CLK
+clkin => cnt[4].CLK
+clkin => up.CLK
+TAW[0] <= TAW[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+TAW[1] <= TAW[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+TAW[2] <= TAW[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+TAW[3] <= TAW[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+TAW[4] <= TAW[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pwm|PWM_generator:inst1
+clkin => PWM~reg0.CLK
+ref[0] => LessThan0.IN5
+ref[1] => LessThan0.IN4
+ref[2] => LessThan0.IN3
+ref[3] => LessThan0.IN2
+ref[4] => LessThan0.IN1
+TAW[0] => LessThan0.IN10
+TAW[1] => LessThan0.IN9
+TAW[2] => LessThan0.IN8
+TAW[3] => LessThan0.IN7
+TAW[4] => LessThan0.IN6
+PWM <= PWM~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pwm|PWM_generator:inst
+clkin => PWM~reg0.CLK
+ref[0] => LessThan0.IN5
+ref[1] => LessThan0.IN4
+ref[2] => LessThan0.IN3
+ref[3] => LessThan0.IN2
+ref[4] => LessThan0.IN1
+TAW[0] => LessThan0.IN10
+TAW[1] => LessThan0.IN9
+TAW[2] => LessThan0.IN8
+TAW[3] => LessThan0.IN7
+TAW[4] => LessThan0.IN6
+PWM <= PWM~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pwm|PWM_generator:inst3
+clkin => PWM~reg0.CLK
+ref[0] => LessThan0.IN5
+ref[1] => LessThan0.IN4
+ref[2] => LessThan0.IN3
+ref[3] => LessThan0.IN2
+ref[4] => LessThan0.IN1
+TAW[0] => LessThan0.IN10
+TAW[1] => LessThan0.IN9
+TAW[2] => LessThan0.IN8
+TAW[3] => LessThan0.IN7
+TAW[4] => LessThan0.IN6
+PWM <= PWM~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,28 @@
+
+State Machine - |car|send:inst7|sreg0
+Name sreg0.s13 sreg0.s1 sreg0.s2 sreg0.s3 sreg0.s4 sreg0.s5 sreg0.s6 sreg0.s7 sreg0.s8 sreg0.s9 sreg0.s10 sreg0.s11 sreg0.s12 sreg0.s0 
+sreg0.s0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+sreg0.s12 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+sreg0.s11 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+sreg0.s10 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+sreg0.s9 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+sreg0.s8 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+sreg0.s7 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+sreg0.s6 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+sreg0.s5 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+sreg0.s4 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+sreg0.s3 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+sreg0.s2 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+sreg0.s1 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+sreg0.s13 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |car|control_trans_test:inst16|NextState
+Name NextState.STOP_READY NextState.TURN_RIGHTW NextState.TURN_LEFTW NextState.TURN_RIGHT NextState.TURN_LEFT NextState.STOP NextState.FORWARD NextState.START 
+NextState.START 0 0 0 0 0 0 0 0 
+NextState.FORWARD 0 0 0 0 0 0 1 1 
+NextState.STOP 0 0 0 0 0 1 0 1 
+NextState.TURN_LEFT 0 0 0 0 1 0 0 1 
+NextState.TURN_RIGHT 0 0 0 1 0 0 0 1 
+NextState.TURN_LEFTW 0 0 1 0 0 0 0 1 
+NextState.TURN_RIGHTW 0 1 0 0 0 0 0 1 
+NextState.STOP_READY 1 0 0 0 0 0 0 1 
